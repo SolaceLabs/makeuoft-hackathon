@@ -15,8 +15,8 @@ def main():
     # Connection parms for Solace Event broker
     solace_url = "mr1u6o37qngitn.messaging.solace.cloud"
     solace_port = 1883
-    solace_user = "solace-cloud-client"
-    solace_passwd = "2g71evn41v1va1jioggvch69je"
+    solace_user = ""
+    solace_passwd = ""
     solace_clientid = "vats_id"
 
     # Sensor Topics
