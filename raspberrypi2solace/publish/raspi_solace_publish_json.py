@@ -13,10 +13,10 @@ GPIO.setmode(GPIO.BCM)
 instance = dht11.DHT11(pin=14)
 
 # Connection parms for Solace Event Broker
-solace_url = "mr1u6o37qngitn.messaging.solace.cloud"
+solace_url = ""
 solace_port = 1883
-solace_user = "solace-cloud-client"
-solace_passwd =  "2g71evn41v1va1jioggvch69je"
+solace_user = ""
+solace_passwd =  ""
 solace_clientid = "raspberry_pi"
 solace_topic_temp = "devices/temperature/events"
 solace_topic_humidity = "devices/humidity/events"
