@@ -13,7 +13,7 @@ def publish(client,sensor,topic,qos,simulated_reading,trend):
 
 def main():
     # Connection parms for Solace Event broker
-    solace_url = "mr1u6o37qngitn.messaging.solace.cloud"
+    solace_url = ""
     solace_port = 1883
     solace_user = ""
     solace_passwd = ""
