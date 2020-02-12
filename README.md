@@ -36,11 +36,11 @@ Hardware needed:
 
 #### Configure the Dashboard
 1.	Open node “Temperature Events via Solace” Click edit
-  ![](images/nodered-edit-node.png)
+![](images/nodered-edit-node.png)
  
 1.	Provide Server address - This is your Solace Event Broker Endpoint 
 1.	Provide any name for client ID
-  ![]images/nodered-edit-security.png)
+![](images/nodered-edit-security.png)
 
 1.	Provide Username/Password for Solace Event Broker
 1.	Make sure all 5 other “Event” nodes (Level Events via Solace, Pressure Events via Solace etc) have the connectivity information you just provided. It should persist from steps 10-12.
@@ -56,10 +56,10 @@ This section is only necessary if you are using the physical DHT11 sensors to su
 **Before starting this section shutdown and unplug your raspberry pi**
 
 Lookup the Pin configuration for your Raspberry Pi, such as the below:
-![](images/rasppi-pins/png)
+![](images/rasppi-pins.png)
 
 Using the cables provided with the physical sensors connect your DHT11 to your Raspberry PI. The DHT11 sensor should have 3 pins as seen in the photo below.
-![](images/dht11-pins.png
+![](images/dht11-pins.png)
 
 Connect them as follows: 
 - Signal/Data to a GPIO Pin on the Raspberry PI (such as GPIO 17 / physical pin 11 in the pin configuration image above) 
