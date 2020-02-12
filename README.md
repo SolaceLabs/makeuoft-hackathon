@@ -2,8 +2,8 @@
 This repository holds code artifacts for MakeUofT Hackathon 2020
 
 The following items are available, skip to the proper section in the README below for each: 
-- Deploy the IoT SCADA Demo
-- An AWS Lambda Event Publisher
+- [Deploy the IoT SCADA Demo](#deploy-the-iot-scada-demo)
+- [AWS Lambda Event Publisher](#aws-lambda-event-publisher)
 
 
 ## Deploy the IoT SCADA Demo
@@ -111,4 +111,4 @@ Let's also stream sensor data from some virtual sensors.
   
 Awesome job! You have now setup the SCADA demo. Your raspberry PI is now reading data from both physical and virtual sensors and streaming them as events in real-time across the Solace PubSub+ Event Broker. Once on the PubSub+ Event Broker any application, with proper permissions, can subscribe to consume those events. In this demo we created a Node-RED dashboard to do just that, but because we are following the *publish-subscribe* pattern a stream of events can be consumed by multiple consumers so go ahead and add your own consumers as well! 
 
-## - An AWS Lambda Event Publisher
+## AWS Lambda Event Publisher
