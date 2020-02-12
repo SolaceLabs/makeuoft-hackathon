@@ -10,8 +10,10 @@ The following items are available, skip to the proper section in the README belo
 This is the demo that was presented during the workshop. 
 
 ### Demo Architecture
+The demo that we will be creating is a Solace IoT SCADA Demo. It shows how a raspberry PI can stream data from connected sensors into Solace PubSub+ Event Brokers. Once the event streams are available the demo uses Node-RED flows to consume the events and display the sensor data on a real-time, dynamic dashboard. 
 
 ![](images/scada-architecture.png)
+
 
 ### Prerequisistes
 Hardware needed: 
@@ -55,9 +57,11 @@ This section is only necessary if you are using the physical DHT11 sensors to su
 **Before starting this section shutdown and unplug your raspberry pi**
 
 Lookup the Pin configuration for your Raspberry Pi, such as the below:
+
 ![](images/rasppi-pins.png)
 
 Using the cables provided with the physical sensors connect your DHT11 to your Raspberry PI. The DHT11 sensor should have 3 pins as seen in the photo below.
+
 ![](images/dht11-pins.png)
 
 Connect them as follows: 
