@@ -3,6 +3,7 @@ This repository holds code artifacts for MakeUofT Hackathon 2020
 
 The following items are available, skip to the proper section in the README below for each: 
 - [Deploy the IoT SCADA Demo](#deploy-the-iot-scada-demo)
+- [Simple Python MQTT Examples](#simple-python-mqtt-examples)
 - [AWS Lambda Event Publisher](#aws-lambda-event-publisher)
 
 
@@ -110,5 +111,13 @@ Let's also stream sensor data from some virtual sensors.
 - You should see Level, Pressure, NoX and SoX streaming readings on the screen and on Node-Red SCADA dashboard we setup earlier!
   
 Awesome job! You have now setup the SCADA demo. Your raspberry PI is now reading data from both physical and virtual sensors and streaming them as events in real-time across the Solace PubSub+ Event Broker. Once on the PubSub+ Event Broker any application, with proper permissions, can subscribe to consume those events. In this demo we created a Node-RED dashboard to do just that, but because we are following the *publish-subscribe* pattern a stream of events can be consumed by multiple consumers so go ahead and add your own consumers as well! 
+
+## Simple Python MQTT Examples
+Check out this python script which shows how to publish events to Solace PubSub+ using MQTT.
+- [Simple Publisher](makeuoft-hackathon/blob/master/raspberrypi2solace/publish/virtual_solace_publish_json.py)
+
+
+Check out this python script which shows how to subscribe to an event stream from Solace PubSub+ using MQTT. 
+- [Simple Subscriber](makeuoft-hackathon/blob/master/raspberrypi2solace/subscribe/simplesubscriber.py)
 
 ## AWS Lambda Event Publisher
