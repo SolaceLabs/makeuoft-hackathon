@@ -38,12 +38,12 @@ Hardware needed:
 1.	Open node “Temperature Events via Solace” Click edit
 ![](images/nodered-edit-node.png)
  
-1.	Provide Server address - This is your Solace Event Broker Endpoint 
-1.	Provide any name for client ID
+1.	Edit the *Server* field and replace it with the **MQTT Host URL including tcp:// and the port number**
+1.	Provide any name for the Client ID. This is just a name that identifies the client application to the event broker. 
 ![](images/nodered-edit-security.png)
 
-1.	Provide Username/Password for Solace Event Broker
-1.	Make sure all 5 other “Event” nodes (Level Events via Solace, Pressure Events via Solace etc) have the connectivity information you just provided. It should persist from steps 10-12.
+1.	Navigate to the security tab and enter your client *Username* and *Password*. These values can be found in Solace Cloud on the connect tab that we navigated to earlier.  
+1.	Make sure all 5 other “Event” nodes (Level Events via Solace, Pressure Events via Solace, etc) have the connectivity information you just provided as well. 
 1.	Click “Deploy” button on right corner of the screen.
 
 #### View the SCADA Dashboard!
