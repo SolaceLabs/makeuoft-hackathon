@@ -85,7 +85,7 @@ Install Adafruit_DHT to read the physical sensor `pip3 install Adafruit_DHT`
   - You should see Humidity and Temperature reading on the screen; go ahead and kill the script using `ctrl-c`
 
 - Now that we know the sensor works let's stream the data to the PubSub+ Event Broker using MQTT. 
-  - Edit `raspi_solace_publish_json.py
+  - Open the *raspi_solace_publish_json.py* file to edit it.
     - Update the pin # again on line 13. 
     - Update the `solace_url`, `solace_port`, `solace_user` and `solace_passwd` to match your connection info from Solace Cloud. Remember we got this info under **MQTT** on the connect tab. 
   - Run the script to start streaming events: `python3 raspi_solace_publish_json.py`
@@ -93,7 +93,7 @@ Install Adafruit_DHT to read the physical sensor `pip3 install Adafruit_DHT`
 	
 #### Stream Events from the virtual sensors 
 Let's also stream sensor data from some virtual sensors.
-- Open the `virtual_solace_publish_json.py` file and edit `solace_url`, `solace_port`, `solace_user` to & `solace_passwd` to match your connection info from Solace Cloud. Remember we got this info under **MQTT** on the connect tab. 
+- Open the *virtual_solace_publish_json.py* file and edit `solace_url`, `solace_port`, `solace_user` to & `solace_passwd` to match your connection info from Solace Cloud. Remember we got this info under **MQTT** on the connect tab. 
 - Run the script to start streaming events: `python3 virtual_solace_publish_json.py`
 - You should see Level, Pressure, NoX and SoX streaming readings on the screen and on Node-Red SCADA dashboard we setup earlier!
   
