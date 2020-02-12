@@ -37,6 +37,10 @@ Hardware needed:
 1.	Import the json into Node-Red editor from Menu-Import
 
 #### Configure the Dashboard
+1.      Choose the "IoT Cloud SCADA - AWS" Flow that now appears on the screen. 
+
+![](images/nodered-flow.png)
+
 1.	Open node “Temperature Events via Solace” Click edit
 ![](images/nodered-edit-node.png)
  
@@ -47,9 +51,13 @@ Hardware needed:
 1.	Make sure all 5 other “Event” nodes (Level Events via Solace, Pressure Events via Solace, etc) have the connectivity information you just provided as well. 
 1.	Click “Deploy” button on right corner of the screen.
 
+
 #### View the SCADA Dashboard!
 1.	Go to http://localhost:1880/ui
 1.	The SCADA dashboard should be displayed with static values.
+![](images/nodered-dash.png)
+
+
 
 ### Connect the hardware 
 This section is only necessary if you are using the physical DHT11 sensors to supply Temperature & Humidity. 
