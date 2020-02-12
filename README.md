@@ -114,10 +114,10 @@ Awesome job! You have now setup the SCADA demo. Your raspberry PI is now reading
 
 ## Simple Python MQTT Examples
 Check out this python script which shows how to publish events to Solace PubSub+ using MQTT.
-- [Simple Publisher](makeuoft-hackathon/blob/master/raspberrypi2solace/publish/virtual_solace_publish_json.py)
+- [Simple Publisher](raspberrypi2solace/publish/virtual_solace_publish_json.py)
 
 
 Check out this python script which shows how to subscribe to an event stream from Solace PubSub+ using MQTT. 
-- [Simple Subscriber](makeuoft-hackathon/blob/master/raspberrypi2solace/subscribe/simplesubscriber.py)
+- [Simple Subscriber](raspberrypi2solace/subscribe/simplesubscriber.py)
 
 ## AWS Lambda Event Publisher
