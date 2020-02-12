@@ -73,21 +73,29 @@ Connect them as follows:
 ### Stream the Sensor Data to Node-RED via Solace Event Brokers
 
 #### Prepare to stream events using Python & MQTT
-- Ssh into Raspberry Pi
+- ssh into Raspberry Pi 
 - Install python 3.7 `sudo apt install python3-pip`
 - Install paho-mqtt to send events over mqtt `pip3 install paho-mqtt`
 
 #### Stream Events from the physical DHT11 sensor
 Install Adafruit_DHT to read the physical sensor `pip3 install Adafruit_DHT`
-- Test the physical sensor by entering: `python3 simpletest.py`
+- Test the physical sensor by following these steps
+  - Edit `simpletest.py` and update the `pin` variable value to match the GPIO number you connected the Signal/Data pin of your DHT11 sensor to. If you followed the pin configuration above that would be `17`
+  - Run the script: `python3 simpletest.py`
   - You should see Humidity and Temperature reading on the screen; go ahead and kill the script using `ctrl-c`
 
-- Stream the sensor data to Solace by entering: `python3 raspi_solace_publish_json.py`
+- Now that we know the sensor works let's stream the data to the PubSub+ Event Broker using MQTT. 
+  - Edit `raspi_solace_publish_json.py
+    - Update the pin # again on line 13. 
+    - Update the `solace_url`, `solace_port`, `solace_user` and `solace_passwd` to match your connection info from Solace Cloud. Remember we got this info under **MQTT** on the connect tab. 
+  - Run the script to start streaming events: `python3 raspi_solace_publish_json.py`
   - You should see Humidity and Temperature streaming readings on the screen and on Node-Red SCADA dashboard we setup earlier!
 	
 #### Stream Events from the virtual sensors 
-- Stream the Type `python3 virtual_solace_publish_json.py`
-  - You should see Level, Pressure, NoX and SoX streaming readings on the screen and on Node-Red SCADA dashboard we setup earlier!
+Let's also stream sensor data from some virtual sensors.
+- Open the `virtual_solace_publish_json.py` file and edit `solace_url`, `solace_port`, `solace_user` to & `solace_passwd` to match your connection info from Solace Cloud. Remember we got this info under **MQTT** on the connect tab. 
+- Run the script to start streaming events: `python3 virtual_solace_publish_json.py`
+- You should see Level, Pressure, NoX and SoX streaming readings on the screen and on Node-Red SCADA dashboard we setup earlier!
   
 Awesome job! You have now setup the SCADA demo. Your raspberry PI is now reading data from both physical and virtual sensors and streaming them as events in real-time across the Solace PubSub+ Event Broker. Once on the PubSub+ Event Broker any application, with proper permissions, can subscribe to consume those events. In this demo we created a Node-RED dashboard to do just that, but because we are following the *publish-subscribe* pattern a stream of events can be consumed by multiple consumers so go ahead and add your own consumers as well! 
 
