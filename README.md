@@ -119,5 +119,3 @@ Check out this python script which shows how to publish events to Solace PubSub+
 
 Check out this python script which shows how to subscribe to an event stream from Solace PubSub+ using MQTT. 
 - [Simple Subscriber](raspberrypi2solace/subscribe/simplesubscriber.py)
-
-## AWS Lambda Event Publisher
