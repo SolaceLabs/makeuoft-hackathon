@@ -1,9 +1,6 @@
 # makeuoft-hackathon
 This repository holds code artifacts for MakeUofT Hackathon 2020
 
-The following items are available, skip to the proper section in the README below: 
-- [Arduino Event Publisher](#arduino-event-publisher)
-
 ## Arduino Event Publisher
 You can create an IOT device using any Arduino compatible prototyping board.  The process is very similar to the steps described in our Raspberry Pi / IOT workshop.  The key is to import and configure an MQTT client library from the Arduino IDE.
 
@@ -14,6 +11,7 @@ The above project is related to driving a two-motor remote-control-car using Sol
 
 You could try to make your own AWS IOT Button hardware using these techniques.  There is a nice Arduino Library named *Ace Button* which implements the de-bounce logic required to detect button clicks, double-clicks, etc.
 
+```
 // Example Button Code / Add to your Arduino Project
 //
 #include <AceButton.h>
@@ -53,7 +51,7 @@ void handleEvent(AceButton* button, uint8_t eventType,
       break;
   }
 }
-
+```
 
 
 
